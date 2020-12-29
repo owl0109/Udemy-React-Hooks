@@ -1,13 +1,12 @@
 import React,{ useContext } from 'react'
 import Event from './Event'
 import AppContext from '../contexts/AppContext'
-import App from './App'
 
 //引数のdispatchを違う場所で使い続ける=>バケツリレーをしている=>propDrilling問題
 
 
-const Events = ({state,dispatch}) => {
-    const value = useContext(AppContext)
+const Events = () => {
+    const {state} = useContext(AppContext)
     return(
         <div>
         {/* これで呼べる
@@ -24,7 +23,7 @@ const Events = ({state,dispatch}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {state.map((event,index) => (<Event key = {index} event={event} dispatch = {dispatch}/>))}
+                    {state.map((event,index) => (<Event key = {index} event={event} />))}
                 </tbody>
             </table>
         </div>
