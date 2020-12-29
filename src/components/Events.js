@@ -1,6 +1,9 @@
 import React from 'react'
 import Event from './Event'
 
+//引数のdispatchを違う場所で使い続ける=>バケツリレーをしている=>propDrilling問題
+
+
 const Events = ({state,dispatch}) => {
     return(
         <div>
