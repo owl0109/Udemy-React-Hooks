@@ -1,4 +1,4 @@
-import React , {useReducer, useState} from 'react'
+import React , {useReducer} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import reducer from '../reducers'
 import EventForm from './EventForm'
