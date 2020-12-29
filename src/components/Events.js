@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import Event from './Event'
+import AppContext from '../contexts/AppContext'
+import App from './App'
 
 //引数のdispatchを違う場所で使い続ける=>バケツリレーをしている=>propDrilling問題
 
 
 const Events = ({state,dispatch}) => {
+    const value = useContext(AppContext)
     return(
         <div>
+        {/* これで呼べる
+            <div>{value}</div>
+        */}
             <h4>イベント一覧</h4>
             <table className = "table table-hover">
                 <thead>
