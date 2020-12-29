@@ -9,7 +9,11 @@ console.log({AppContext})
 
 const App = () =>{
   //[配列(状態),関数(手段)]を渡す
-  const [state, dispatch] = useReducer(reducer,[])
+  const initialState = 
+  {
+    events:[]
+  }
+  const [state, dispatch] = useReducer(reducer,initialState)
 
   return (
     <AppContext.Provider value = {{ state,dispatch }}>
