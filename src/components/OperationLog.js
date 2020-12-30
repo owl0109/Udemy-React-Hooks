@@ -1,5 +1,4 @@
-import React,{ useContext } from 'react'
-import OperationLogs from '../reducers/operationLogs'
+import React from 'react'
 
 
 const OperationLog = ({operationLog}) => {
