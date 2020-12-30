@@ -4,6 +4,7 @@ import reducer from '../reducers'
 import EventForm from './EventForm'
 import Events from './Events'
 import AppContext from '../contexts/AppContext'
+import operationLogs from '../reducers/operationLogs'
 
 console.log({AppContext})
 
@@ -11,7 +12,8 @@ const App = () =>{
   //[配列(状態),関数(手段)]を渡す
   const initialState = 
   {
-    events:[]
+    events:[],
+    operationLogs:[]
   }
   const [state, dispatch] = useReducer(reducer,initialState)
 
